@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  user_id: MyString
+  task: MyString
+  label: MyString
+  notes: MyString
+  content: MyString
+  completed: MyString
+  status: MyString
+  priority: MyString
+
+two:
+  user_id: MyString
+  task: MyString
+  label: MyString
+  notes: MyString
+  content: MyString
+  completed: MyString
+  status: MyString
+  priority: MyString
