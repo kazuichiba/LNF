@@ -70,8 +70,6 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
-    meyer-css-reset-rails (1.0.2)
-      rails (~> 3.2.12)
     mime-types (1.23)
     multi_json (1.7.3)
     nokogiri (1.5.9)
@@ -149,7 +147,6 @@ DEPENDENCIES
   factory_girl
   jquery-rails
   launchy
-  meyer-css-reset-rails (~> 1.0.2)
   pg
   rails (= 3.2.13)
   rspec-rails

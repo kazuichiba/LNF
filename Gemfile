@@ -3,20 +3,17 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.13'
 gem 'devise'
 
-
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'pg'
-gem 'devise'
-gem "meyer-css-reset-rails", "~> 1.0.2"
+
 group :test, :development do
   gem 'rspec-rails'
   gem 'capybara'
   gem 'launchy'
   gem 'factory_girl'
 end
-
 
 # Gems used only for assets and not required
 # in production environments by default.
