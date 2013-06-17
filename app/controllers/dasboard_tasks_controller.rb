@@ -40,12 +40,12 @@ class DashboardTasksController < ApplicationController
 
     respond_to do |format|
       if @task.save
-        format.html { redirect_to @task, notice: 'Event was successfully created.' }
+        format.html { redirect_to @task, notice: 'Task was successfully created.' }
         format.json { render json: @task, status: :created, location: @task }
       else
         format.html { render action: "new" }
         format.json { render json: @task.errors, status: :unprocessable_entity }
-      end
+      end          
     end
   end
 
@@ -55,7 +55,7 @@ class DashboardTasksController < ApplicationController
 
     respond_to do |format|
       if @task.update_attributes(params[:task])
-        format.html { redirect_to @event, notice: 'Task was successfully updated.' }
+        format.html { redirect_to @task, notice: 'Task was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
@@ -66,8 +66,8 @@ class DashboardTasksController < ApplicationController
 
  
   def destroy
-      @event = Tasks.find(params[:id])
-      @event.destroy
+      @task = Tasks.find(params[:id])
+      @task.destroy
       respond_to do |format|
       format.html { redirect_to tasks_url }
       format.json { head :no_content }

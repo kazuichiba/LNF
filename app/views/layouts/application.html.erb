@@ -11,6 +11,16 @@
 
 <%= render "nav"  %>
 
+<div id="flash">
+  <% flash.each do |key, value| -%>
+    <%- unless key == :action %>
+      <div class="alert-message <%= key %>"><%=h value %></div>
+    <%- end-%>
+  <% end -%>
+</div>
+
+
+
 
 
 <%= yield %>

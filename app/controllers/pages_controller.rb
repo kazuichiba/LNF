@@ -6,6 +6,8 @@ class PagesController < ApplicationController
   end
 
   def dashboard
+    @tasks = Task.all
+
   end
   
   protected

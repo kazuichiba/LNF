@@ -33,7 +33,15 @@
     <li><a href="step4.html">Step #4</a></li>
     <li><a href="step5.html">Step #5</a></li>
   </ol>
-  <ul>
+  <ul>    
+<% @tasks.each do |task| %>
+      <li>
+        <a href="#">
+          <h2><%= task.title %></h2>
+          <p>Text Content #1</p>
+        </a>
+      </li>
+<% end %>
     <li>
       <a href="#">
         <h2>Title #1</h2>
