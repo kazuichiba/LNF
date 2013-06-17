@@ -2,13 +2,13 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.13'
 gem 'devise'
-
+gem 'cancan'
+gem 'carrierwave'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'pg'
-
-group :test, :development do
+ group :test, :development do
   gem 'rspec-rails'
   gem 'capybara'
   gem 'launchy'

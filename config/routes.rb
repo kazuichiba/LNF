@@ -3,6 +3,7 @@ Letsnotforget::Application.routes.draw do
 
   get "pages/index"
   get "pages/dashboard"
+  
   match "dashboard" => "pages#dashboard"
 
   resources :users, :pages

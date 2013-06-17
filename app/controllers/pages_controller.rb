@@ -8,7 +8,6 @@ class PagesController < ApplicationController
   def dashboard
   end
   
-
   protected
   def resource
     @resource ||= User.new
@@ -21,6 +20,5 @@ class PagesController < ApplicationController
   def devise_mapping
     @devise_mapping ||= Devise.mappings[:user]
   end
-
 
 end
