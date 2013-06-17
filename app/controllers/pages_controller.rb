@@ -9,6 +9,9 @@ class PagesController < ApplicationController
   end
   
   protected
+
+
+  # these methods are the methods required to use to the devise form
   def resource
     @resource ||= User.new
   end
