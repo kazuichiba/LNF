@@ -1,4 +1,4 @@
-class PagesController < ApplicationController
+  class PagesController < ApplicationController
   helper_method :resource, :resource_name, :devise_mapping
 
   def index
@@ -6,13 +6,11 @@ class PagesController < ApplicationController
   end
 
   def dashboard
-    @tasks = Task.all
-
+    @tasks = Task.order("created_at").all    
+    @task = Task.new
   end
   
   protected
-
-
   # these methods are the methods required to use to the devise form
   def resource
     @resource ||= User.new

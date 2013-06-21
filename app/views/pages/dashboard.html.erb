@@ -1,100 +1,36 @@
   <div class="row-fluid">
     <div class="span4">
-      <h3>
-        Tasks
+      <h3>Tasks
       </h3>
-      <p>
-        Content
-      </p>
+    </div>
+    <div class="span4">
+     <%= render "tasks/form" %>
     </div>
     <div class="span4">
       <h3>
-        In Progress
       </h3>
-      <p>
-        Content
-      </p>
-    </div>
-        <div class="span4">
-        <h3>
-        Finished
-      </h3>
-      <p>
-        Content
-      </p>
     </div>
   </div>
+  <div class="sticky-notes">
+    <ol>
+      <li><strong></strong></li>
+      <li><a href="step2.html">Step #2</a></li>
+      <li><a href="step3.html">Step #3</a></li>
+      <li><a href="step4.html">Step #4</a></li>
+      <li><a href="step5.html">Step #5</a></li>
+    </ol>
+    <ul>    
+      <% @tasks.each do |task| %>
+      <li id="task_id_<%= task.id %>">
+       <%= link_to(task) do %>
+        <h2><%= task.title %></h2>
+        <p><%= task.content %></p>
+        <p></p>
+      <% end -%>
 
-<div class="sticky-notes">
-  <ol>
-    <li><strong>Step #1</strong></li>
-    <li><a href="step2.html">Step #2</a></li>
-    <li><a href="step3.html">Step #3</a></li>
-    <li><a href="step4.html">Step #4</a></li>
-    <li><a href="step5.html">Step #5</a></li>
-  </ol>
-  <ul>    
-<% @tasks.each do |task| %>
-      <li>
-        <a href="#">
-          <h2><%= task.title %></h2>
-          <p>Text Content #1</p>
-        </a>
+
       </li>
-<% end %>
-    <li>
-      <a href="#">
-        <h2>Title #1</h2>
-        <p>Text Content #1</p>
-      </a>
-    </li>
-    <li>
-      <a href="#">
-        <h2>Title #2</h2>
-        <p>Text Content #2</p>
-      </a>
-    </li>
-    <li>
-      <a href="#">
-        <h2>Title #3</h2>
-        <p>Text Content #3</p>
-      </a>
-    </li>
-    <li>
-      <a href="#">
-        <h2>Title #4</h2>
-        <p>Text Content #4</p>
-      </a>
-    </li>
-    <li>
-      <a href="#">
-        <h2>Title #5</h2>
-        <p>Text Content #5</p>
-      </a>
-    </li>
-    <li>
-      <a href="#">
-        <h2>Title #6</h2>
-        <p>Text Content #6</p>
-      </a>
-    </li>
-    <li>
-      <a href="#">
-        <h2>Title #2</h2>
-        <p>Text Content #2</p>
-      </a>
-    </li>
-    <li>
-      <a href="#">
-        <h2>Title #7</h2>
-        <p>Text Content #7</p>
-      </a>
-    </li>
-    <li>
-      <a href="#">
-        <h2>Title #8</h2>
-        <p>Text Content #8</p>
-      </a>
-    </li>
-  </ul>
-</div>
+      <% end %>
+
+    </ul>
+  </div>
