@@ -9,6 +9,7 @@ gem 'carrierwave'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'pg'
+gem 'pry-rails'
  group :test, :development do
   gem 'rspec-rails'
   gem 'capybara'

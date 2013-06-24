@@ -26,6 +26,6 @@ def create
    redirect_to dashboard_path, notice: 'Task was successfully created.' 
  else
    render action: "new" 
-    end          
-  end
+  end          
+end
 end

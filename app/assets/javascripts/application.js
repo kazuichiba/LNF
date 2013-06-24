@@ -17,10 +17,21 @@
 
 $(function(){
 
-var front = document.getElementByID('flipthis')
-  , back_content = "<h1>I'm the back!</h1>" // Generate or pull any HTML you want for the back.
-  , back
-  
+
+  $(".task-front").click(function(e){
+    e.preventDefault();
+
+    var sticky = $(e.target).closest('.task-front');
+
+    var front = document.getElementById(sticky.attr('id'))
+      , back_content = $('.sticky-form', sticky).prop("outerHTML")
+      , back;
+
+    back = flippant.flip(front, back_content, 'modal'); 
+
+  });
+
+
 });
 
 

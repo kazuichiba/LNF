@@ -54,7 +54,7 @@ ActiveRecord::Schema.define(:version => 20130612220533) do
     t.string   "label"
     t.string   "notes"
     t.string   "content"
-    t.string   "completed"
+    t.boolean  "completed"
     t.string   "status"
     t.string   "priority"
     t.datetime "created_at", :null => false
