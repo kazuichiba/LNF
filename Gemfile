@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+ruby '1.9.2'
 gem 'rails', '3.2.13'
 gem 'devise'
 gem 'simple_form'
@@ -23,8 +23,7 @@ end
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
-  gem 'bootstrap-sass'
-  gem "bootstrap-sass-rails"
+  # gem "bootstrap-sass-rails"
   gem "twitter-bootstrap-rails"
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
