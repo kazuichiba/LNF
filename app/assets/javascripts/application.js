@@ -10,13 +10,14 @@
 // WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE SHOULD
 // GO AFTER THE REQUIRES BELOW.
 //
+//= require twitter/bootstrap
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
 
-
 $(function(){
 
+  $(".alert").delay(1000).fadeOut(2000);
 
   $(".task-front").click(function(e){
     e.preventDefault();

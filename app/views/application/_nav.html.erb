@@ -10,36 +10,30 @@
         <a class="brand" href="/">LNF</a>
         <div class="nav-collapse collapse">
           <ul class="nav">
-          <!-- <li class="active">
-            <a href="#">Home</a>
-          </li> -->
-          <li>
-            <a href="/dashboard">Tasks</a>
-          </li>
-        <!-- <li>
-          <a href="/users/sign_in" data-method="delete" rel="nofollow">Sign in</a>
-        </li> -->
-        <li>
-        <a href="/users/sign_out" data-method="delete" rel="nofollow">Sign out</a>
-      </li>
-        </ul>
-        <ul class="nav">  
-          <li class="active">
-          </li>
-        </ul>
+            <li>
+              <a href="/dashboard">Tasks</a>
+            </li>
+            <li>
+            <!--   <a href="/users/sign_out" data-method="delete" rel="nofollow">Sign out</a> -->
+            <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+            </li>
+          </ul>
+          <ul class="nav">  
+            <li class="active">
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
+  </div> 
+  <div id="user_nav"> 
+    <% if user_signed_in? %>
+    Signed in as <%= current_user.email %>. Not you?
+    <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+    <% else %>
+    <%= link_to "Sign up", new_user_registration_path %> or <%= link_to "sign in", new_user_session_path %>
+    <% end %>
   </div>
-</div> 
-<div id="user_nav"> -->
-  <% if user_signed_in? %>
-  Signed in as <%= current_user.email %>. Not you?
-  <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
-  <% else %>
-  <%= link_to "Sign up", new_user_registration_path %> or <%= link_to "sign in", new_user_session_path %>
-  <% end %>
-</div>
-
 </div><!-- /.navbar-inner -->
 </div><!-- /.navbar -->
 

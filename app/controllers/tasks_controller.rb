@@ -23,7 +23,7 @@ def create
   @task = Task.new(params[:task])
 
   if @task.save
-   redirect_to dashboard_path, notice: 'Task was successfully created.' 
+   redirect_to dashboard_path, :flash => { :success => 'Task was successfully created.'}
  else
    render action: "new" 
   end          

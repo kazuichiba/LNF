@@ -6,15 +6,15 @@ describe Task do
     previous_count = Task.all.count
     let(:task) { FactoryGirl.create(:task) }
     expect(Task.all.count).to eq(previous_count + 1)
-  end
+  end 
 
 
   it "is valid" do
-    expect (task).to be_valid
+    expect(title).to_have(content)
   end
 
   it "it is not valid without task" do
-    task.title = nil
+    Task.title = nil
     expect(task).to_not be_valid
   end
-
+end

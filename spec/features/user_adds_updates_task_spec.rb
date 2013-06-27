@@ -1,37 +1,42 @@
-  require 'spec_helper'
+require 'spec_helper' 
 
-  feature "user can add task" do
+  describe "user adds a task" do  
     let(:user) { FactoryGirl.create(:user) }
-    let(:task) { FactoryGirl.create(:task, user: user) }
-
-describe "user adds a task" do  
-  it "creates a task with with valid content" do
-    visit dashboard_path
-    fill_in "Task", with: "take out the garbage"
-    click_button "Create Task"
-    expect(page).to have_content("Task was successfully created.")
-    expect(page).to have_content("take out the garbage")  
-    expect(Task.find_by_title(title)).to_not be_nil
-  end
-  it "requires valid content" do
-    visit dashboard_path
-    fill_in "Task", with: "take out the garbage"
-    click_button "Create Task"
-    expect(page).to have_content("Task was successfully created.")
-    expect(page).to have_content('take out the garbage')
-  end
-
-  describe "user clicks task to update it" do
-    it "takes user to task update page" do
-    visit dashboard_path
-    click_link("tasks/1")
-    visit task_1_path
-    expect(page).to have_content("Task")
+    let!(:task) { FactoryGirl.create(:task, user: user) }
+    it "creates a task with with valid content" do
+      visit dashboard_path
+      fill_in "Task", with: "take out the garbage"
+      click_button "Create Task"
+      expect(page).to have_content("Task was successfully created.")
+      expect(page).to have_content("take out the garbage")  
     end
   end
+
+  describe "user cannot fill out task unless has valid content" do
+    it "requires valid content" do
+      visit dashboard_path
+      fill_in "Task", with: "take out the garbage"
+      click_button "Create Task"
+      expect(page).to have_content("Task was successfully created.")
+      expect(page).to have_content('take out the garbage')
+    end
+  end
+  
+  describe "user clicks task to update it" do
+    let!(:task) { FactoryGirl.create(:task, user: user) }
+    let(:user) { FactoryGirl.create(:user) }
+    it "sticky note displays update form" do
+      binding.pry
+      visit dashboard_path
+      save_and_open_page
+      click_link(tasks_path(task.id))
+      expect(page).to have("form")
+    end
+  end
+  
   describe "user fills out form to update a task" do
     it "displays a form for a user to fill out updates" do
-      visit edit_tasks_path
+      visit dashboard_path
       fill_in "Task", with: "take out the garbage"
       fill_in "Content", with: "take out the garbage tomorrow"
       fill_in "Label", with: "chore"
@@ -43,9 +48,4 @@ describe "user adds a task" do
       expect(page).to have_content("Task was successfully updated.")
     end
   end
-
-
-
-end
-
 

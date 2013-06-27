@@ -7,12 +7,17 @@ body {
 }
 .navbar-wrapper {
   height: 100px;
-  background-color: #1b1bb3;
+  background-color: #03899c;
 }
 .navbar .brand {
 }
 .id {
   background-color: #FFBF00;
+}
+
+.span4{
+  text-decoration: underline;
+
 }
 
 .addtask{
@@ -103,7 +108,7 @@ body {
    
   }
   ul li a.task-sticky.completed {
-    background: #a5bf40  !important;
+    background: #03899c  !important;
   }
   ul li{
     margin:1em;
@@ -118,31 +123,31 @@ body {
     font-family:"Reenie Beanie",arial,sans-serif;
     font-size:180%;
   }
-  ul li a.task-sticky{
-    -webkit-transform: rotate(-6deg);
-    -o-transform: rotate(-6deg);
-    -moz-transform:rotate(-6deg);
-  }
+  // ul li a.task-sticky{
+  //   -webkit-transform: rotate(-6deg);
+  //   -o-transform: rotate(-6deg);
+  //   -moz-transform:rotate(-6deg);
+  // }
   ul li:nth-child(even) a.task-sticky{
-    -o-transform:rotate(4deg);
-    -webkit-transform:rotate(4deg);
-    -moz-transform:rotate(4deg);
+    // -o-transform:rotate(4deg);
+    // -webkit-transform:rotate(4deg);
+    // -moz-transform:rotate(4deg);
     position:relative;
     top:5px;
     background:#ffc;
   }
   ul li:nth-child(3n) a.task-sticky{
-    -o-transform:rotate(-3deg);
-    -webkit-transform:rotate(-3deg);
-    -moz-transform:rotate(-3deg);
+    // -o-transform:rotate(-3deg);
+    // -webkit-transform:rotate(-3deg);
+    // -moz-transform:rotate(-3deg);
     position:relative;
     top:-5px;
     background:#ffc;
   }
   ul li:nth-child(5n) a.task-sticky{
-    -o-transform:rotate(5deg);
-    -webkit-transform:rotate(5deg);
-    -moz-transform:rotate(5deg);
+    // -o-transform:rotate(5deg);
+    // -webkit-transform:rotate(5deg);
+    // -moz-transform:rotate(5deg);
     position:relative;
     top:-10px;
   }
@@ -171,3 +176,4 @@ body {
     
   }
 }
+
