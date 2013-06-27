@@ -6,7 +6,10 @@ Letsnotforget::Application.routes.draw do
   
   match "dashboard" => "pages#dashboard"
 
-  resources :users, :pages
+  resources :users
+  resources :pages
+  resources :tasks
+  
   root :to => 'pages#index'
 
   # The priority is based upon order of creation:
