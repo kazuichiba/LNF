@@ -12,25 +12,19 @@
     </div>
   </div>
   <div class="sticky-notes">
-    <ol>
-      <li><strong></strong></li>
-      <li><a href="step2.html">Step #2</a></li>
-      <li><a href="step3.html">Step #3</a></li>
-      <li><a href="step4.html">Step #4</a></li>
-      <li><a href="step5.html">Step #5</a></li>
-    </ol>
     <ul>    
       <% @tasks.each do |task| %>
-      <li id="task_id_<%= task.id %>">
-       <%= link_to(task) do %>
+      <li class="task-front" id="task_id_<%= task.id %>">
+       <%= link_to(task, class: "task-sticky  #{'completed' if task.completed }") do %>
         <h2><%= task.title %></h2>
         <p><%= task.content %></p>
-        <p></p>
+
+        <div class="edit-task">
+          <a class="sticky-form"><%= render "tasks/update_form", task: task %></a>
+        </div>
       <% end -%>
-
-
       </li>
       <% end %>
-
+     
     </ul>
   </div>

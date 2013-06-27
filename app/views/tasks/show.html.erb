@@ -1,11 +1,3 @@
-<%= simple_form_for @task do |f| %>
-  <%= f.input :title, label: "Task" %>
-  <%= f.input :content%>
-  <%= f.input :label %>
-  <%= f.input :priority %>
-  <%= f.submit "Update Task" %>
-<% end %>
-
+<%= render "update_form", task: @task %>
 <div class="backside">
-  "hey hey hey"
 </div>

@@ -10,17 +10,29 @@
 // WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE SHOULD
 // GO AFTER THE REQUIRES BELOW.
 //
+//= require twitter/bootstrap
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
 
-
 $(function(){
 
-var front = document.getElementByID('flipthis')
-  , back_content = "<h1>I'm the back!</h1>" // Generate or pull any HTML you want for the back.
-  , back
-  
+  $(".alert").delay(1000).fadeOut(2000);
+
+  $(".task-front").click(function(e){
+    e.preventDefault();
+
+    var sticky = $(e.target).closest('.task-front');
+
+    var front = document.getElementById(sticky.attr('id'))
+      , back_content = $('.sticky-form', sticky).prop("outerHTML")
+      , back;
+
+    back = flippant.flip(front, back_content, 'modal'); 
+
+  });
+
+
 });
 
 
