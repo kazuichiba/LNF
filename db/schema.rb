@@ -11,42 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130612220533) do
-
-  create_table "account_memberships", :force => true do |t|
-    t.string   "user_id",    :null => false
-    t.string   "account_id", :null => false
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
-  create_table "accounts", :force => true do |t|
-    t.string   "user_id",    :null => false
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
-  create_table "categories", :force => true do |t|
-    t.string   "name",       :null => false
-    t.string   "color",      :null => false
-    t.string   "account_id", :null => false
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
-  create_table "categorizations", :force => true do |t|
-    t.string   "task_id",     :null => false
-    t.string   "category_id", :null => false
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
-  end
-
-  create_table "notes", :force => true do |t|
-    t.string   "task_id",    :null => false
-    t.string   "content",    :null => false
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
+ActiveRecord::Schema.define(:version => 20130625172955) do
 
   create_table "tasks", :force => true do |t|
     t.string   "user_id"
@@ -54,7 +19,7 @@ ActiveRecord::Schema.define(:version => 20130612220533) do
     t.string   "label"
     t.string   "notes"
     t.string   "content"
-    t.string   "completed"
+    t.boolean  "completed"
     t.string   "status"
     t.string   "priority"
     t.datetime "created_at", :null => false

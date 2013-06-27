@@ -6,7 +6,7 @@ class CreateTasks < ActiveRecord::Migration
       t.string :label
       t.string :notes
       t.string :content
-      t.string :completed
+      t.boolean :completed
       t.string :status
       t.string :priority
 
