@@ -26,7 +26,7 @@ describe 'user is assigned a task' do
 
     click_on "Update Task"
 
-    expect task to have been reassigned
+    # expect task to have been reassigned
     expect(assigned_user.tasks).to_not include(Task.last)
     expect(user.tasks).to include(Task.last)
   end
