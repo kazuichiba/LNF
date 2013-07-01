@@ -1,5 +1,6 @@
 <%= simple_form_for @task do |f| %>
   <%= f.input :title, label: "Task" %>
+  <%= f.association :user, label: 'Assigned To' %>
   <%= f.submit "Create Task" %>
 <% end %>
 
