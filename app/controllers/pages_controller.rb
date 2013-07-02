@@ -1,4 +1,6 @@
   class PagesController < ApplicationController
+    before_filter :authenticate_user!
+
   helper_method :resource, :resource_name, :devise_mapping
 
   def index
@@ -6,7 +8,8 @@
   end
 
   def dashboard
-    @tasks = Task.order("created_at").all    
+    @pending_tasks = Task.pending
+    @completed_tasks = Task.completed
     @task = Task.new
   end
   

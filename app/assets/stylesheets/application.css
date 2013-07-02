@@ -12,5 +12,15 @@
  *= require twitter/bootstrap/_responsive
  *= require LNF
  *= require flippant
+ *= require job_blue
+ *= require job_blue_responsive
+ *= require theme_switcher
  *= require_self
  */
+
+
+/*MOVE ME*/
+#create-task {
+  float: right;
+  margin: 20px 120px;
+}
