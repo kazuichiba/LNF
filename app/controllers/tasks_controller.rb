@@ -19,13 +19,14 @@ class TasksController < ApplicationController
   @task = Task.find(params[:id])
 end
 
-def create
-  @task = Task.new(params[:task])
+  def create
+    @task = Task.new(params[:task])
 
-  if @task.save
-   redirect_to dashboard_path, :flash => { :success => 'Task was successfully created.'}
- else
-   render action: "new" 
-  end          
-end
+    if @task.save
+      TwilioMessenger.send_text_message("+14018376866", "Task was successfully created.")
+      redirect_to dashboard_path, :flash => { :success => 'Task was successfully created.'}
+    else
+     render action: "new" 
+    end          
+  end
 end

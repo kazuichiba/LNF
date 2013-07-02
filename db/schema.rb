@@ -14,7 +14,7 @@
 ActiveRecord::Schema.define(:version => 20130625172955) do
 
   create_table "tasks", :force => true do |t|
-    t.string   "user_id"
+    t.integer  "user_id"
     t.string   "title",      :null => false
     t.string   "label"
     t.string   "notes"
