@@ -5,6 +5,7 @@
   <%= f.input :label %>
   <%= f.input :priority %>
   <%= f.input :status %>
+  <%= f.association :user, label: 'Assigned To' %>
   <%= f.input :completed, input_html: {class: "inline checkbox"} %>
   <%= f.submit "Update Task", class: 'update-task' %>
 <% end %>

@@ -14,18 +14,14 @@ describe 'user is assigned a task' do
 
     select(assigned_user.name, from: "Assigned To")
     click_on "Create Task"
-
     expect(assigned_user.tasks).to include(Task.last)
   end
 
   it 'allows a user to reassign a task' do
     sign_in_as user
     visit task_path(task)
-
     select(user.name, from: "Assigned To")
-
     click_on "Update Task"
-
     # expect task to have been reassigned
     expect(assigned_user.tasks).to_not include(Task.last)
     expect(user.tasks).to include(Task.last)
