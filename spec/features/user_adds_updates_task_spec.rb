@@ -27,9 +27,7 @@ require 'spec_helper'
     let!(:task) { FactoryGirl.create(:task, user: user) }
     let(:user) { FactoryGirl.create(:user) }
     it "sticky note displays update form" do
-      binding.pry
       visit dashboard_path
-      save_and_open_page
       click_link(tasks_path(task.id))
       expect(page).to have("form")
     end
