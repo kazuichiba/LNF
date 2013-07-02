@@ -1,7 +1,29 @@
-<%= simple_form_for @task do |f| %>
-  <%= f.input :title, label: "Task" %>
-  <%= f.association :user, label: 'Assigned To' %>
-  <%= f.submit "Create Task" %>
-<% end %>
+<div class="row-fluid">
+  <div class="span8">
+   <%= simple_form_for @task do |f| %>
+     <h3><%= @task.id ? 'Edit ' : 'Create ' %> a Task</h3>
+   <div class="row-fluid">
+    <div class="span6">
 
+        <%= f.input :title, as: :text, input_html:{rows: 5} %>
 
+ 
+    </div>
+    <div class="span6">
+      <%= f.association :user, label: 'Assigned To' %>
+    </div>
+   </div>
+    
+    <%= f.input :content, as: :text, input_html: {rows: 9} %>
+    <%= f.input :label %>
+    <%= f.input :priority %>
+    <%= f.input :status %>
+    
+    <%= f.input :completed, input_html: {class: "inline checkbox"} %>
+    <%= f.submit "Save Task", class: 'btn btn-primary btn-large update-task' %>
+
+  <% end %>
+
+  </div>
+
+</div>

@@ -8,4 +8,13 @@ class Task < ActiveRecord::Base
   has_many :categories
 
   belongs_to :user
+
+  class << self
+    def completed
+      where(completed: true)
+    end
+    def pending
+      where(completed: false)
+    end
+  end
 end

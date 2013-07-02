@@ -1,0 +1,17 @@
+<table class="table table-striped">
+  <tbody>
+
+    <br />
+    <% tasks.each do |task| %>
+    <tr class="<%= 'success' unless task.completed %>">
+      <td> <span class="label <%= 'label-success' if task.user %>"><%= task.user.try(:name) || 'unassigned'  %></span> </td>
+      <td><strong><%= link_to task.title, task_path(task) %></strong><br>
+        <%= link_to task.content, task_path(task) %>
+      </td>
+      <td></td>
+      <td> <%# insert the date here %></td>
+    </tr> 
+    <% end %>
+  </tr>
+</tbody>
+</table>
