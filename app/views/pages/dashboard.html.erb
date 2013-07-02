@@ -18,7 +18,7 @@
        <%= link_to(task, class: "task-sticky  #{'completed' if task.completed }") do %>
         <h2><%= task.title %></h2>
         <p><%= task.content %></p>
-
+        <% link_to "Delete This Task", dashboard_path(task), method: :delete, :class => "btn btn-danger" %>
         <div class="edit-task">
           <a class="sticky-form"><%= render "tasks/update_form", task: task %></a>
         </div>
