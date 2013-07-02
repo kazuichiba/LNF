@@ -11,7 +11,6 @@ describe 'user is assigned a task' do
     visit new_task_path
     fill_in 'Task', with: 'Plan a Pizza Party super fun times with Chris and Jason'
     # add a select box to task form (new form) using association / look at simple form
-
     select(assigned_user.name, from: "Assigned To")
     click_on "Create Task"
     expect(assigned_user.tasks).to include(Task.last)
