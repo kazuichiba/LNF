@@ -1,7 +1,8 @@
 class TasksController < ApplicationController
   
   def index
-    @task = Task.update(params[:id])
+    @q = Task.search(params[:q])
+    @tasks = @q.result
   end
 
   def new
