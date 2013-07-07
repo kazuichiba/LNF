@@ -1,11 +1,6 @@
 source 'https://rubygems.org'
 ruby '1.9.3'
 
-if RUBY_VERSION =~ /1.9/
-  Encoding.default_external = Encoding::UTF_8
-  Encoding.default_internal = Encoding::UTF_8
-end
-
 gem 'rails', '3.2.13'
 gem 'devise'
 gem 'simple_form'
@@ -15,7 +10,8 @@ gem 'cancan'
 gem 'pg'
 gem 'pry-rails'
 gem 'pry'
- group :test, :development do
+ 
+group :test, :development do
   gem 'rspec-rails'
   gem 'capybara'
   gem 'launchy'
