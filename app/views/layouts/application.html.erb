@@ -1,25 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link href='http://fonts.googleapis.com/css?family=Lily+Script+One' rel='stylesheet' type='text/css'>
   <title>Letsnotforget</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <%= render "nav"  %>
 
-<%= render "nav"  %>
+  <div id="flash">
 
-<div id="flash">
- 
-      <div class="alert-message">
-   
-</div>
-<div class="container-fluid">
-<%= render partial: "/layouts/flash_messages", flash: flash %>
-<%= yield %>
-</div>
-</div>
+    <div class="alert-message">
+
+    </div>
+    
+  </div>
+    <div class="container-fluid">
+      <%= render partial: "/layouts/flash_messages", flash: flash %>
+
+      <%= yield %>
+
+    </div>
+  </div>
 </body>
 </html>

@@ -1,56 +1,56 @@
 <div class="row-fluid">
   <div class="span8">
    <%= simple_form_for @task do |f| %>
-     <h3><%= @task.id ? 'Edit ' : 'Create ' %> a Task</h3>
+   <h3><%= @task.id ? 'Edit ' : 'Create ' %> a Task</h3>
    <div class="row-fluid">
     <div class="span6">
 
-        <%= f.input :title, as: :text, input_html:{rows: 5} %>
+      <%= f.input :title, as: :text, input_html:{rows: 5} %>
 
- 
+      
     </div>
     <div class="span8">
       <%= f.association :user, label: 'Assigned To' %>
     </div>
-   </div>
-    
-    <%= f.input :content, as: :text, input_html: {rows: 9} %>
-    <%= f.input :label %>
-    <%= f.input :priority %>
-    <%= f.input :status %>
-    
-    <%= f.input :completed, input_html: {class: "inline checkbox"} %>
-    <%= f.submit "Save Task", class: 'btn btn-primary btn-large update-task' %>
+  </div>
+  
+  <%= f.input :content, as: :text, input_html: {rows: 9} %>
+  <%= f.input :label %>
+  <%= f.input :priority %>
+  <%= f.input :status %>
+  
+  <%= f.input :completed, input_html: {class: "inline checkbox"} %>
+  <%= f.submit "Save Task", class: 'btn btn-primary btn-large update-task' %>
 
   <% end %>
 
-  </div>
+</div>
 <div class="span4 sidebar" style="height: 1494px;"> 
-      <br>
-      <br>
-      <h3></h3>
+  <br>
+  <br>
+  <h3></h3>
+  
+  <div class="row-fluid form-tooltip">  
+    
+    <div class="span12">
+      <h4></h4>
       
-      <div class="row-fluid form-tooltip">  
-        
-        <div class="span12">
-          <h4></h4>
-          
-        </div>  
-      </div>  
-      <div class="row-fluid">
-        
-        <div class="span12">
-          <h4></h4>
-          
-        </div>      
-      </div>      
-      <div class="row-fluid">
-        
-        <div class="span12">
-          <h4></h4>
-         
-        </div>
-      </div>
+    </div>  
+  </div>  
+  <div class="row-fluid">
+    
+    <div class="span12">
+      <h4></h4>
+      
+    </div>      
+  </div>      
+  <div class="row-fluid">
+    
+    <div class="span12">
+      <h4></h4>
       
     </div>
+  </div>
+  
+</div>
 </div>

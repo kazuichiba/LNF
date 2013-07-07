@@ -1,8 +1,75 @@
+<div class="span12"
+<div class="row-fluid">
+  <br>
 
-<%= render 'task_table', tasks:  @pending_tasks %>
+  <div class="row-fluid">
+    <div class="row-fluid">
+      <div class="span5">
+        <h3>Find Tasks</h3>
+      </div>        
+      <div class="span5">
+        <h3>Who?</h3>
+      </div>
+    </div>
+
+    <div class="row-fluid">
+
+      <div class="span5">
+        <input type="text" class="span12 search_input" placeholder="Tasks">
+      </div>
+
+      <div class="span5">
+        <select class="home_select">
+          <option value="0"></option>
+          <option value="0"></option>
+        </select> 
+        <a class="btn btn-primary btn-success search_btn" href="browse.html">Search</a>            
+      </div>
+
+      
+    </div>
+  </div>
+  <br>
   
-<%= render 'task_table', tasks: @completed_tasks %>
 
+  <%= render 'task_table', tasks:  @pending_tasks %>
 
+  <%= render 'task_table', tasks: @completed_tasks %>
 
- 
+  <div class="pagination pull-right">
+    <ul>
+      <li>
+        <a href="#">Prev</a>
+      </li>
+      <li class="active">
+        <a href="#">1</a>
+      </li>
+      <li>
+        <a href="#">2</a>
+      </li>
+      <li>
+        <a href="#">3</a>
+      </li>
+      <li>
+        <a href="#">4</a>
+      </li>
+      <li>
+        <a href="#">5</a>
+      </li>
+      <li>
+        <a href="#">6</a>
+      </li>
+      <li>
+        <a href="#">7</a>
+      </li>
+      <li>
+        <a href="#">8</a>
+      </li>
+      <li>
+        <a href="#">9</a>
+      </li>
+      <li>
+        <a href="#">Next</a>
+      </li>
+    </ul>
+  </div>

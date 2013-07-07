@@ -7906,6 +7906,7 @@ body {
   color: #000000;
   font-size: 14px;
   line-height: 1.5em;
+  background-image: url('../public/tweed.png');
   background-position: fixed;
   overflow-x: hidden;
 }
@@ -8313,8 +8314,8 @@ a i {
 }
 .btn.search_btn {
   font-size: 15px;
-  margin-top: 2px;
-  margin-left: 20px;
+  margin-top: -81x;
+  margin-left: 407px;
   height: 29px;
   line-height: 29px;
   padding: 0 29px;
