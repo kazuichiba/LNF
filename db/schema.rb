@@ -11,25 +11,25 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130707230841) do
+ActiveRecord::Schema.define(:version => 20130707210438) do
 
   create_table "comments", :force => true do |t|
+    t.integer  "commentable_id"
+    t.string   "commentable_type"
     t.integer  "user_id"
-    t.integer  "task_id"
-    t.text     "body"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
   end
 
   create_table "tasks", :force => true do |t|
-    t.string   "user_id",    :null => false
-    t.string   "task",       :null => false
-    t.string   "label",      :null => false
-    t.string   "notes",      :null => false
-    t.string   "content",    :null => false
-    t.string   "completed",  :null => false
-    t.string   "status",     :null => false
-    t.string   "priority",   :null => false
+    t.integer  "user_id"
+    t.string   "title",      :null => false
+    t.string   "label"
+    t.string   "notes"
+    t.string   "content"
+    t.boolean  "completed"
+    t.string   "status"
+    t.string   "priority"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
