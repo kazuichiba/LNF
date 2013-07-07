@@ -9,9 +9,15 @@ Letsnotforget::Application.routes.draw do
   resources :users
   resources :pages
   resources :tasks
+  # resources :dashboards
   
-  root :to => 'pages#index'
+  # resources :tasks do
+  #   collection do 
+  #     match 'search' => 'dashboard#search', :via => [:get, :post], :as => :search 
+  #   end
+  # end
 
+  root :to => 'pages#index'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

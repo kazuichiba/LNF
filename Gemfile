@@ -6,10 +6,6 @@ gem 'simple_form'
 gem 'carrierwave'
 gem 'twilio-ruby'
 gem 'cancan'
-gem 'rails_admin'
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
-
 gem 'pg'
 gem 'pry-rails'
 gem 'pry'
@@ -34,6 +30,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
+
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
