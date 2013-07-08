@@ -1,9 +1,17 @@
 <%= @task.title %>
+<%= "Assigned to:" + @task.user.name %>
+<%= @task.content %>
+<%= @task.label %>
+<%= @task.priority %>
+<%= @task.status %>
+
+<h1> Add a Comment </h1> 
 <%= simple_form_for [@task, @comment] do |f| %>
-  <%= f.input :body %>
+  <%= f.input :body, label:false %>
   <%= f.submit %>
 <% end %>
 
 <% @task.comments.each do |comment| %>
   <%= comment.body %>
+  <%= comment.user.name %>
   <% end %>

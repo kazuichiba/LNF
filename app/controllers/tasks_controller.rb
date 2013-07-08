@@ -22,8 +22,7 @@ class TasksController < ApplicationController
  
  def show
   @task = Task.find(params[:id])
-  binding.pry
-  @comment = @task.comments.build
+  @comment = Comment.new
 end
 
   def destroy
