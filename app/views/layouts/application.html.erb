@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
   <title>Letsnotforget</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
@@ -20,6 +21,7 @@
       <%= render partial: "/layouts/flash_messages", flash: flash %>
 
       <%= yield %>
+
 
     </div>
   </div>
