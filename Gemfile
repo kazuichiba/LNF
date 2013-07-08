@@ -10,6 +10,7 @@ gem 'cancan'
 gem 'pg'
 gem 'pry-rails'
 gem 'pry'
+
  
 group :test, :development do
   gem 'rspec-rails'
