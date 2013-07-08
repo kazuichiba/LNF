@@ -6,6 +6,7 @@ class Task < ActiveRecord::Base
 
   has_many :categories, :through => :categorizations
   has_many :categories
+  has_many :comments
 
   belongs_to :user
 

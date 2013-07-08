@@ -1,1 +1,9 @@
-<%= render "form", task: @task %>
+<%= @task.title %>
+<%= simple_form_for [@task, @comment] do |f| %>
+  <%= f.input :body %>
+  <%= f.submit %>
+<% end %>
+
+<% @task.comments.each do |comment| %>
+  <%= comment.body %>
+  <% end %>

@@ -15,9 +15,15 @@ class TasksController < ApplicationController
      redirect_to dashboard_path, notice: 'Task was successfully updated.'   
    end
  end
+
+ def edit
+    @task = Task.find(params[:id])
+ end
  
  def show
   @task = Task.find(params[:id])
+  binding.pry
+  @comment = @task.comments.build
 end
 
   def destroy

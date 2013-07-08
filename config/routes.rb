@@ -6,13 +6,13 @@ Letsnotforget::Application.routes.draw do
   
   match "dashboard" => "pages#dashboard"
   
-  resources :posts do
-  resources :comments
+  resources :tasks do
+    resources :comments
   end
 
   resources :users
   resources :pages
-  resources :tasks
+
   # resources :dashboards
   
   # resources :tasks do

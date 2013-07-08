@@ -1,8 +1,8 @@
 class CommentsController < ApplicationController
 
-def create
-    @commentable = Post.find(params[:id])
-    @comment = @commentable.comments.new(params[:comment])
+  def create
+    @task = Task.find(params[:id])
+    @comment = @task.comments.new(params[:comment])
     if @comment.save
       redirect_to @commentable
       flase[:notice] = "Comment created."
