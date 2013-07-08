@@ -1,39 +1,20 @@
 <div class="span12">
-<div class="row-fluid">
-  <br>
-
   <div class="row-fluid">
+    <br>
     <div class="row-fluid">
-      <div class="span5">
-        <h3>Task Board</h3>
-        
-      </div>        
-    <!--   <div class="span5">
-        <h3>Who?</h3>
-      </div> -->
-    </div>
-
-    <div class="row-fluid">
-
-      <div class="span5">
-      <!--   <input type="text" class="span12 search_input" placeholder="Tasks"> -->
+      <div class="row-fluid">
+        <div class="span5">
+          <h3>Task Board</h3>
+        </div>        
       </div>
-
-      <div class="span5">
-        <!-- <select class="home_select">
-          <option value="0"></option>
-          <option value="0"></option> -->
-        </select> 
-        <a class="btn btn-primary btn-success search_btn" href="browse.html">Search</a>            
-      </div>
-      
-    </div>
+     <div class="row-fluid">
+    <div class="span5">
   </div>
-  <br>
-  
+</div>
+<br>
 
-  <%= render 'task_table', tasks:  @pending_tasks %>
 
-  <%= render 'task_table', tasks: @completed_tasks %>
+      <%= render 'task_table', tasks:  @pending_tasks %>
 
-  
+      <%= render 'task_table', tasks: @completed_tasks %>
+
