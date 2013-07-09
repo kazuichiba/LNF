@@ -4,7 +4,6 @@
   helper_method :resource, :resource_name, :devise_mapping
   
   def index
-
   end
 
   def dashboard

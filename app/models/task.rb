@@ -21,7 +21,7 @@ class Task < ActiveRecord::Base
   end
 
   def notify_assigned_user
-    if user.phone_number.present? && user.receives_notification.present?
+    if user.present? && user.phone_number.present? && user.receives_notification.present?
       TwilioMessenger.send_text_message(user.phone_number, "Your are assigned a task.")
     end
   end
