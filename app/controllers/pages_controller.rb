@@ -4,7 +4,7 @@
   helper_method :resource, :resource_name, :devise_mapping
 
   def index
-
+    @q = Task.search(params[:q])
   end
 
   def dashboard
