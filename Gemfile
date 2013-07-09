@@ -10,9 +10,12 @@ gem 'cancan'
 gem 'pg'
 gem 'pry-rails'
 gem 'pry'
+gem "ransack" 
+ 
 
  
 group :test, :development do
+
   gem 'rspec-rails'
   gem 'capybara'
   gem 'launchy'
