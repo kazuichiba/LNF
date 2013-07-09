@@ -5,10 +5,14 @@ Letsnotforget::Application.routes.draw do
   get "pages/dashboard"
   
   match "dashboard" => "pages#dashboard"
+  
+  resources :tasks do
+    resources :comments
+  end
 
   resources :users
   resources :pages
-  resources :tasks
+
   # resources :dashboards
   
   # resources :tasks do

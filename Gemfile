@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 ruby '1.9.3'
+
 gem 'rails', '3.2.13'
 gem 'devise'
 gem 'simple_form'
@@ -10,7 +11,11 @@ gem 'pg'
 gem 'pry-rails'
 gem 'pry'
 gem "ransack" 
- group :test, :development do
+ 
+
+ 
+group :test, :development do
+
   gem 'rspec-rails'
   gem 'capybara'
   gem 'launchy'
@@ -26,7 +31,7 @@ group :assets do
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
-
+  
   gem 'uglifier', '>= 1.0.3'
 end
 

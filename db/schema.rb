@@ -22,14 +22,14 @@ ActiveRecord::Schema.define(:version => 20130707230841) do
   end
 
   create_table "tasks", :force => true do |t|
-    t.string   "user_id",    :null => false
-    t.string   "task",       :null => false
-    t.string   "label",      :null => false
-    t.string   "notes",      :null => false
-    t.string   "content",    :null => false
-    t.string   "completed",  :null => false
-    t.string   "status",     :null => false
-    t.string   "priority",   :null => false
+    t.integer  "user_id"
+    t.string   "title",      :null => false
+    t.string   "label"
+    t.string   "notes"
+    t.string   "content"
+    t.boolean  "completed"
+    t.string   "status"
+    t.string   "priority"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

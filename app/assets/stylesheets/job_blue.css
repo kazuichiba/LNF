@@ -1718,7 +1718,7 @@ table {
   border-spacing: 0;
 }
 .table {
-  width: 100%;
+  width: 80%;
   margin-bottom: 20px;
 }
 .table th,
@@ -7906,7 +7906,7 @@ body {
   color: #000000;
   font-size: 14px;
   line-height: 1.5em;
-  background-image: url('../public/tweed.png');
+  background-image: url('../brickwall.png');
   background-position: fixed;
   overflow-x: hidden;
 }
@@ -8106,6 +8106,10 @@ form h3 {
 }
 .container-fluid {
   background: #FFFFFF;
+}
+.logo h1{
+  color: #235a96;
+  font-family: 'Lobster' , cursive;
 }
 .main_content {
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
@@ -8315,7 +8319,7 @@ a i {
 .btn.search_btn {
   font-size: 15px;
   margin-top: -81x;
-  margin-left: 407px;
+  margin-left: 326px;
   height: 29px;
   line-height: 29px;
   padding: 0 29px;
