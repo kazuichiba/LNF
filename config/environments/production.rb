@@ -1,4 +1,19 @@
 Letsnotforget::Application.configure do
+  
+ config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address:              'smtp.gmail.com',
+    port:                 587,
+    domain:               'example.com',
+    user_name:            'kazu.ichiba@gmail.com',
+    password:             'gyuniku1',
+    authentication:       'plain',
+    enable_starttls_auto: true  }
+
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.default_url_options = { :host => 'http://lnf.herokuapp.com' }
+
   # Settings specified here will take precedence over those in config/application.rb
 
   # Code is not reloaded between requests

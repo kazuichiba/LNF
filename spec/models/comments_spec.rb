@@ -1,5 +1,7 @@
 require 'spec_helper'
 
-describe Comments do
-  pending "add some examples to (or delete) #{__FILE__}"
+describe Comment do
+  it { should belong_to(:task) }
+  it { should validate_presence_of(:task) }
+  it { should validate_presence_of(:body) }
 end
