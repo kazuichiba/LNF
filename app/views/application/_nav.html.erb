@@ -34,8 +34,9 @@
         <% end %>
       
       </ul>
+      <% if request.path == dashboard_path %>
       <%= link_to 'create a task', new_task_path, id: 'create-task', class: 'btn btn-primary post_job float-right' %>
+      <% end %>
     </div>
   </div>`
 </div> 
-
