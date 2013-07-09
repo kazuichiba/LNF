@@ -11,7 +11,7 @@ gem 'pg'
 gem 'pry-rails'
 gem 'pry'
 gem "ransack" 
- 
+gem 'phony_rails'
 
  
 group :test, :development do

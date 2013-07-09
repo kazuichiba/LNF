@@ -35,7 +35,6 @@ end
     @task = Task.new(params[:task])
     
     if @task.save
-      # TwilioMessenger.send_text_message("+14018376866", "Task was successfully created.")
       redirect_to dashboard_path, :flash => { :success => 'Task was successfully created.'}
     else
      render action: "new"
