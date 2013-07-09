@@ -28,6 +28,7 @@ end
   def destroy
     @task = Task.find(params[:id])
     @task.destroy
+    redirect_to dashboard_path, :flash => { :success => 'Task is no more!.'}
   end
 
   def create
