@@ -2,15 +2,16 @@
     before_filter :authenticate_user!
 
   helper_method :resource, :resource_name, :devise_mapping
-
+  
   def index
-    @q = Task.search(params[:q])
+
   end
 
   def dashboard
-    @pending_tasks = Task.pending
-    @completed_tasks = Task.completed
-    @task = Task.new
+    @search = Task.search(params[:q])
+    @result = @search.result
+    @pending_tasks = @result.pending
+    @completed_tasks = @result.completed
   end
   
   protected
@@ -26,5 +27,4 @@
   def devise_mapping
     @devise_mapping ||= Devise.mappings[:user]
   end
-
 end
