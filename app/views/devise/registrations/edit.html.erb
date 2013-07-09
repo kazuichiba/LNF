@@ -21,6 +21,12 @@
   <div><%= f.label :phone_number %> 
     <%= f.text_field :phone_number %>
   </div>
+  
+  <%= f.label :receives_notification, class: "checkbox" do  %>
+      <%= f.check_box :receives_notification %>
+      Do you want to receive text message notifcations?
+      <% end %>
+  
   <div><%= f.submit "Update" %></div>
 <% end %>
 
