@@ -17,11 +17,14 @@ describe 'user is assigned a task' do
   end
 
   it 'allows a user to reassign a task' do
+    task
     sign_in_as user
-    visit task_path(task)
+    visit dashboard_path
+    click_on "edit"
     select(user.name, from: "Assigned To")
     click_on "Save Task"
     # expect task to have been reassigned
+    # binding.pry
     expect(assigned_user.tasks).to_not include(Task.last)
     expect(user.tasks).to include(Task.last)
   end

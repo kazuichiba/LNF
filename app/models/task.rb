@@ -1,6 +1,7 @@
 class Task < ActiveRecord::Base
   attr_accessible :completed, :content, :label, :notes,
     :priority, :status, :title, :user_id
+
   after_save :notify_assigned_user, :if => :user_id_changed?
 
   validates_presence_of :title
