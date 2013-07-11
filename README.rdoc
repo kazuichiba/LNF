@@ -1,5 +1,6 @@
 == Welcome to Let's Not Forget
 
+A Kanban style task tracker for couples and families.
 
 Families and couples are constantly busy with tasks and events that fill their every day. While working at my last job I was required to use a Kanban system for tracking tasks and projects. I thought it would be a good idea to bring this efficient and effective system into people's daily lives. My concept is an online system that provides a productive and organized approach to creating, delegating and tracking every day tasks i.e. mailing rent check, picking up your daughter from soccer practice, or remembering to buy a birthday present.
 
