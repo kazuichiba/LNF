@@ -17,3 +17,4 @@ capybara
 launchy
 factory_girl
 
+I want to thank @jzgit for all the help and support.
