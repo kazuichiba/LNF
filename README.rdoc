@@ -13,7 +13,7 @@ ransack
 phony_rails
 
 rspec-rails
-capybara'
+capybara
 launchy
 factory_girl
 
